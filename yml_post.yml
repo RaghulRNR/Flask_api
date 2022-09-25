@@ -1,0 +1,30 @@
+tags:
+  - 'Gym'
+summary: "Inserting new data"
+description: "This is a simple API to Insert data"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+parameters:
+- in: "body"
+  name: "body"
+  description: "Accepts a input dictionary of orders"
+  required: "true"
+  schema:
+    type: "object"
+    properties:
+      order:
+        type: "object"
+    example: {'name':'String','phoneno':'String'}
+
+responses:
+  400:
+    description: "Same response is for 202, 400, 403"
+    schema:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        message:
+          type: "string"

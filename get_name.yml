@@ -1,0 +1,26 @@
+tags:
+  - 'Gym'
+summary: "To get specified user data"
+description: "This is a simple API to get specified user data."
+produces:
+- "application/json"
+parameters:
+- in: "path"
+  name: "name"
+  type: "string"
+  required: "true"
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "string"
+
+  400:
+    description: "Same response is for 202, 400"

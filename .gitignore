@@ -3,3 +3,8 @@
 /workspace.xml
 /Lib
 /Scripts
+/.env
+/.db
+/.idea
+/todo.db
+/html_test.db

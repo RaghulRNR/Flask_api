@@ -1,0 +1,31 @@
+tags:
+  - 'Gym'
+summary: "TO get all user information"
+description: "This is a simple API to get all user information."
+parameters:
+- in: "path"
+  name: "name"
+  type: "string"
+  required: "true"
+- in: "path"
+  name: "password"
+  type: "string"
+  required: "true"
+
+produces:
+- "application/json"
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "string"
+      example: {'token':'tokeni_id'}
+  400:
+    description: "Same response is for 202, 400"

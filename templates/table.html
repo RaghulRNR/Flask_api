@@ -1,0 +1,15 @@
+<html>
+    <form action = "http://localhost:5000/users" method = "get">
+        <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        </head>
+        <body>
+
+        {% for table in tables %}
+                    {{titles[loop.index]}}
+                    {{ table|safe }}
+        {% endfor %}
+        </body>
+    </form>
+</html>

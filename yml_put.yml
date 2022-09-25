@@ -1,0 +1,36 @@
+tags:
+  - 'Gym'
+summary: "To update data"
+description: "This is a simple API to update data"
+parameters:
+  - name: name
+    in: path
+    type: string
+    schema:
+      type: string
+    required: true
+    example: 'dynamo://gold.test_schema/test_table2'
+  - in: "body"
+    name: "body"
+    description: "Accepts a input dictionary of orders"
+    required: "true"
+    schema:
+      type: "object"
+      properties:
+        order:
+          type: "object"
+      example: {'name':'String','phoneno':'String'}
+responses:
+  200:
+    description: 'Empty response'
+    content:
+      application/json:
+        description: Resource description
+        required: true
+  404:
+    description: 'Resource not found'
+    content:
+      application/json:
+        schema:
+          description: Resource description
+          required: true

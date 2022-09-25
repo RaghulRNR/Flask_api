@@ -1,0 +1,27 @@
+tags:
+  - 'Gym'
+summary: "TO get all user information"
+description: "This is a simple API to get all user information."
+parameters:
+- in: "header"
+  description: "an authorization header"
+  name: "headers"
+  type: "string"
+  required: "true"
+produces:
+- "application/json"
+responses:
+  200:
+    description: "Success"
+    schema:
+      type: "object"
+      properties:
+        data:
+          type: "object"
+        status:
+          type: "string"
+        message:
+          type: "string"
+
+  400:
+    description: "Same response is for 202, 400"
